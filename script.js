@@ -59,4 +59,32 @@ function generatePassword(length, upper, lower,  number, symbol){
         return ''
     }
     //i=0 lenght=20, 4 
-   
+    for(let i=0; i<length; i += typesCount ){
+        typesArr.forEach(type =>{
+            const funcName = Object.keys(type)[0]
+            generatePassword +=randomFunc[funcName]()
+
+        })
+        
+    }
+    const finalPassword = generatePassword.slice(0, length)
+    return finalPassword;
+
+}
+
+clipboardEl.addEventListener('click', ()=>{
+    const textArea = document.createElement('textarea')
+    const password = resultEl.innerText
+    if(!password){return}
+    
+    textArea.value = password
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand('copy')
+    textArea.remove()
+    alert("Password copied to clipboard")
+    
+
+
+})
+
