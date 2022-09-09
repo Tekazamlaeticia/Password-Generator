@@ -9,36 +9,40 @@
   </head>
   <body>
     <div class="container">
-      <h2> Password Generator </h2>
-      <div class="resut-container">
-        <span id="resut"></span>
-        <button class="btn" id="clipboard"><i class="far fa-clipboard"></i>
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"></i>
         </button>
       </div>
       <div class="settings">
         <div class="setting">
-          <label >Password Lenght</label>
-          <input type="number" value="20" min="4" id="length">
+          <label>Password Length</label>
+         <input type="number" value="5" min="4" id="length">
         </div>
         <div class="setting">
-          <label >includ uppercase letters</label>
-          <input type="checkbox"  id="uppercase" checked>
+          <label>Include uppercase letters</label>
+         <input type="checkbox"  id="uppercase" checked>
         </div>
         <div class="setting">
-          <label >includ lowercase letters</label>
-          <input type="checkbox" id="lowercase" checked>
+          <label>Include lowercase letters</label>
+         <input type="checkbox"  id="lowercase" checked>
         </div>
         <div class="setting">
-          <label >includ number</label>
-          <input type="checkbox" id="numbers" checked>
-          </div>
+          <label>Include number</label>
+         <input type="checkbox"  id="numbers" checked>
+        </div>
         <div class="setting">
-          <label >includ symbols</label>
-          <input type="checkbox"  id="symbols" checked>
+          <label>include symbols</label>
+         <input type="checkbox"  id="symbols" checked>
         </div>
       </div>
-      <button class="btn btn-large" id="generate">Generate Paaword</button>
+      <button class="btn btn-large" id="generate">
+        Generate Password
+      </button>
+
     </div>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
